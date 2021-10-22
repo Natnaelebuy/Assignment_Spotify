@@ -46,12 +46,8 @@ public class Main {
  
         }
 
-        System.out.println("Byeeee!p");
-
-
-
-    
-   
+        System.out.println("Byeeee!");
+ 
         
     }
     

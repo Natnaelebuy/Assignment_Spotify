@@ -24,7 +24,7 @@ public class Main {
         String response = "";
 
         while(!response.equals("Q")){
-            System.out.println("P = Play, S = Stop, R = Reset, Q = Quit");
+            System.out.println("P = Play, T = resume S = Stop, R = Reset, Q = Quit");
             System.out.print("Enter your choice: ");
 
             response = scanner.next();
@@ -32,6 +32,8 @@ public class Main {
 
             switch(response){
                 case ("P"): clip.start();
+                break;
+                case ("T"): clip.start();
                 break;
                 case ("S"): clip.stop();
                 break;

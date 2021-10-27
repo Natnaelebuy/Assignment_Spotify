@@ -41,6 +41,9 @@ public class Main {
                 case ("Q"): clip.close();
                 break;
                 default: System.out.println("Not a valid respons"); 
+
+
+            
             
             
             }

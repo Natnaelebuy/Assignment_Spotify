@@ -16,7 +16,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         
-        File file = new File("CKay - Love Nwantiti.wav");
+        File file = new File("Music= CKay - Love Nwantiti.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);

@@ -25,7 +25,7 @@ private static HashMap<String, Song> songs;
    // "main" makes this class a java app that can be executed
    public static void main(String[] args) {
        Song s = new Song();
-           s.setArtist("CKay - Love Nwantiti.wav");
+           s.setArtist("CKay");
            s.setTitle("Love Nwantiti");
            s.setYear("2020");
            s.setGenre("Pop");
@@ -33,7 +33,7 @@ private static HashMap<String, Song> songs;
            songs.put((String) s.getTitle(), s);
 
            s = new Song();
-           s.setArtist("Migos - T-Shirt ");
+           s.setArtist("Migos");
            s.setTitle("T-Shirt");
            s.setYear("2018");
            s.setGenre("Pop");
@@ -41,7 +41,7 @@ private static HashMap<String, Song> songs;
            songs.put((String) s.getTitle(), s);
 
            s = new Song();
-           s.setArtist("Dj khalid- hold you down");
+           s.setArtist("Dj khalid");
            s.setTitle("hold you down");
            s.setYear("2015");
            s.setGenre("Pop");

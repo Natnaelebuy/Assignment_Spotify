@@ -1,6 +1,11 @@
+import java.io.File;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Map.Entry;
 
+import javax.lang.model.util.ElementScanner14;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 /*
@@ -96,10 +101,70 @@ private static HashMap<String, Song> songs;
                 Scanner input = new Scanner(System.in);
                 System.out.println("Please enter the title");
                 String title = input.nextLine();
-        
+                Song song = songs.get(title);
+                
+                if (song !=null) 
+                {
+                    System.out.println("Your current selection is now playing");
+                    play((String) song.getFilePath());
+                    
+                }else {
+                    System.out.println("Sorry, please search again.");
+            }
+                break;
+
+                case "l":
+                System.out.println("-->Library<--");
+                for(Entry<String, Song> s : songs.entrySet()){
+                    System.out.println("Title: " + s.getValue().getTitle());
+                    System.out.println("Artist: " + s.getValue().getArtist());
+                    System.out.println("Gemre: " + s.getValue().getGenre());
+                    System.out.println("Year: " + s.getValue().getYear());
+                    System.out.println("");
+                }
+
+                break;
+
+            case "p":
+                System.out.println("-->Play<--");
+                break;
+
+            case "q":
+                System.out.println("-->Quit<--");
+                break;
+
             default:
                 break;
+            
         }
+    }
+    /*
+     * plays an audio file
+     */
+
+    private static void play(String object) {
+
+        // open the audio file
+        final File file = new File(object);
+
+
+        try {
+            // create clip
+            audioClip = AudioSystem.getClip();
+
+            // get input stream
+            final AudioInputStream in = getAudioInputStream(file);
+
+            audioClip.open(in);
+            audioClip.setMicrosecondPosition(0);
+            audioClip.loop(Clip.LOOP_CONTINUOUSLY);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static AudioInputStream getAudioInputStream(File file) {
+        return null;
     }
      
     

@@ -21,4 +21,20 @@ public class Song {
         return null;
     }
 
+    public String getArtist() {
+        return null;
+    }
+
+    public String getGenre() {
+        return null;
+    }
+
+    public String getYear() {
+        return null;
+    }
+
+    public Object getFilePath() {
+        return null;
+    }
+
 }
